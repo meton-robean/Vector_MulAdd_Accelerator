@@ -9,9 +9,9 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 　#4 sha3/ : sha3 algs  
 　#5 spmv/ : sparse matrix multiplication  
  
-**rocc/sbt/ : sbt unit tests of accelerators 单元测试　**   
+**rocc/sbt/ : sbt unit tests of accelerators 单元测试**   
 **rocc/zynq/ : zynq config file**   
-**verilator-tests/ : C test cases **      
+**verilator-tests/ : C test cases**      
 
 
 ### Usage:  
