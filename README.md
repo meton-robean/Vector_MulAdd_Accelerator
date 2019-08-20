@@ -76,9 +76,8 @@ e.g.if you test kernel accel(simple vector multiplication adder accelerator ):
 
 #### result:  
 
-'''
-
- using random seed 1566300015
+ '''
+using random seed 1566300015
 This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
 Listening on port 37035
 
@@ -135,15 +134,15 @@ tmp[1]:26
 rs1: 000000000fee9980, rs2: 000000000fee9960
 vec_len:                    4,    rd: 0a
 mem read begin!,  status--** busy reg:1
-vec1:          2           1           0           0 
-vec2:          3           2           0           0 
+vec1:          2           1           0           0  
+vec2:          3           2           0           0  
 result:          8
 s_compute_done
 tmp[2]:8
 [INFO] ***** result: 70 ****** success!
 Completed after 3156322 cycles
 
-'''   
+ '''
 
 
 
