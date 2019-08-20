@@ -10,6 +10,11 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 　#5 spmv/ : sparse matrix multiplication  
  
 **rocc/sbt/ : ｓｂｔ unit tests of accelerators**  
+**rocc/zynq/ : zynq config **
+**verilator-tests/ : C test cases **  
+
+### Usage:  
+ 
 
 
 
