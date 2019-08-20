@@ -9,9 +9,10 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 　#4 sha3/ : sha3 algs  
 　#5 spmv/ : sparse matrix multiplication  
  
-**rocc/sbt/ : ｓｂｔ unit tests of accelerators**  
-**rocc/zynq/ : zynq config **
-**verilator-tests/ : C test cases **  
+**rocc/sbt/ : ｓｂｔ unit tests of accelerators**   
+**rocc/zynq/ : zynq config**  
+**verilator-tests/ : C test cases **   
+
 
 ### Usage:  
  #1 download rocketchip RoCC accelerator template:  
@@ -25,6 +26,7 @@ e.g.if you test kernel accel(simple vector multiplication adder accelerator ):
 
 #### C test case:  
   '''
+  
   int main() {
     
     //test1
@@ -66,6 +68,7 @@ e.g.if you test kernel accel(simple vector multiplication adder accelerator ):
     printf("[INFO] ***** result: %d ****** success!\n", result3);
     return 0;
 }
+
   '''  
 #### run the accelerator emulator:  
 
