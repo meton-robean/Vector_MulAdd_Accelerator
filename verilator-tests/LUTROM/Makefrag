@@ -1,0 +1,11 @@
+#=======================================================================
+# Makefrag for LUTROM tests
+#-----------------------------------------------------------------------
+
+LUTROM_sc_tests = \
+	curve_0 \
+
+LUTROM_p_tests = $(addprefix LUTROM-p-, $(LUTROM_sc_tests))
+LUTROM_v_tests = $(addprefix LUTROM-v-, $(LUTROM_sc_tests))
+
+spike_tests += $(LUTROM_p_tests) $(LUTROM_v_tests)

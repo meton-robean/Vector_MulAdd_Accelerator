@@ -1,0 +1,11 @@
+#=======================================================================
+# Makefrag for mult tests
+#-----------------------------------------------------------------------
+
+mult_sc_tests = \
+	doMult \
+
+mult_p_tests = $(addprefix mult-p-, $(mult_sc_tests))
+mult_v_tests = $(addprefix mult-v-, $(mult_sc_tests))
+
+spike_tests += $(mult_p_tests) $(mult_v_tests)
