@@ -10,8 +10,8 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 　#5 spmv/ : sparse matrix multiplication  
  
 **rocc/sbt/ : ｓｂｔ unit tests of accelerators**   
-**rocc/zynq/ : zynq config**  
-**verilator-tests/ : C test cases **   
+**rocc/zynq/ : zynq config file**   
+**verilator-tests/ : C test cases **      
 
 
 ### Usage:  
@@ -21,7 +21,7 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
  #3 replace rocc/ and verilator-tests/ in deca with rocc/ and verilator-tests in this repository  
  #4 **follow the README in deca to test the accelerators**   
    
-### Test Result:  
+### Test:  
 e.g.if you test kernel accel(simple vector multiplication adder accelerator ):  
 
 #### C test case:  
@@ -77,6 +77,8 @@ e.g.if you test kernel accel(simple vector multiplication adder accelerator ):
 #### result:  
 
  、、、
+ 
+ 
  
  、、、
 
