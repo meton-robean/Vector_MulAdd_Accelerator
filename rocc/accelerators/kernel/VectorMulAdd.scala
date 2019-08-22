@@ -2,17 +2,15 @@ package kernel
 
 import chisel3._
 
-class VectorMul(val w: Int,val n: Int) extends Module{
+class VectorMulAdd(val w: Int,val n: Int) extends Module{
   val io = IO(new Bundle{
     val vec1 =  Input(Vec(n,UInt(w.W)))
     val vec2 =  Input(Vec(n,UInt(w.W)))
     val out  =  Output(UInt(w.W))
   })
 
-  val muls = Array.fill(n)(Module(new Mul(n=w)).io)
-
-  //val reg0_vec16 = Reg(Vec(Seq.fill(w){ UInt(16.W) }))
-  //val reg1_vec16 = Reg(Vec(Seq.fill(w){ UInt() }))
+  //val muls = Array.fill(n)(Module(new Mul(n=w)).io)  //int 
+  val muls = Array.fill(n)(Module(new FP_Mul(n=w)).io) //float
 
   val quotient   = RegInit(Vec(Seq.fill(n)(0.asUInt(w.W))))
 
@@ -24,7 +22,8 @@ class VectorMul(val w: Int,val n: Int) extends Module{
     //result = result+quotient(i)
   }
 
-  val adder=Module(new VectorElemAdd(w=w,n=n)).io
+  //val adder=Module(new VectorElemAdd(w=w,n=n)).io  //int
+  val adder=Module(new FP_VectorElemAdd(w=w,n=n)).io //float
 
   adder.input :=quotient
 

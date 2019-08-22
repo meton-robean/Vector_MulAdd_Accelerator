@@ -193,13 +193,13 @@ class KernelController(val w: Int = 32, val n: Int = 8)(implicit p: Parameters) 
             when(canCompute){
                 printf("vec1:")//debug
                 for(i <- 0 until n){
-                    printf(" %d ", x_data(i))
+                    printf(" %b ", x_data(i))
                 }
                 printf("\n")
 
                 printf("vec2:")
                 for(i <- 0 until n){
-                    printf(" %d ", y_data(i))
+                    printf(" %b ", y_data(i))
                 }
                 printf("\n")
 
@@ -225,7 +225,7 @@ class KernelController(val w: Int = 32, val n: Int = 8)(implicit p: Parameters) 
             }
         }
         is(s_resp_rocc){
-            printf("result: %d\n", result_data)           //debug
+            printf("result: %b\n", result_data)           //debug
             io.enable     := false.B
             io.resp_valid := true.B
             //printf("cmt: io.resp_rd: %d\n",io.resp_rd ) //debug

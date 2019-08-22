@@ -8,26 +8,6 @@
 
 
 
-// void VEC_VEC_MULADD(int *vec1_addr, int *vec2_addr, int vec_len, int *result){
-    
-//     int N_COMPUTE_UNIT = 4 ;
-//     int iter = vec_len/N_COMPUTE_UNIT ;
-//     int tmp =0;
-//     for(int i=0; i<iter; i++ ){
-//         asm volatile ("fence");
-//         int base1 = vec1_addr + i*sizeof( int);
-//         int base2 = vec2_addr + i*sizeof( int);
-//         ROCC_INSTRUCTION_SS(0, base1, base2, 0);
-//         ROCC_INSTRUCTION_DS(0, tmp, N_COMPUTE_UNIT,  1); 
-//         asm volatile ("fence");
-//         printf("tmp[%d]:%d\n", i , tmp);
-//         *result = *result +tmp ;
-        
-
-//     }
-
-// }
-
 void VEC_VEC_MULADD(int *vec1_addr, int *vec2_addr, int vec_len, int *result){
     
     int N_COMPUTE_UNIT = 4 ;

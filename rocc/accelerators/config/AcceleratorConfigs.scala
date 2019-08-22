@@ -64,20 +64,20 @@ import kernel._
 // })
 
 // Multiply State Accelerator
-class MultStateAcceleratorConfig extends Config(
-  new WithMultStateAccelerator ++ new DefaultConfig)
+// class MultStateAcceleratorConfig extends Config(
+//   new WithMultStateAccelerator ++ new DefaultConfig)
 
-class WithMultStateAccelerator extends Config((site, here, up) => {
-      case RocketTilesKey => up(RocketTilesKey, site).map { r =>
-        r.copy(rocc = Seq(
-          RoCCParams(
-            opcodes = OpcodeSet.custom0,
-            generator = (p: Parameters) => {
-              val multiplierState = LazyModule(new multState.MultStateAccelerator()(p))
-              multiplierState})
-          ))
-      }
-})
+// class WithMultStateAccelerator extends Config((site, here, up) => {
+//       case RocketTilesKey => up(RocketTilesKey, site).map { r =>
+//         r.copy(rocc = Seq(
+//           RoCCParams(
+//             opcodes = OpcodeSet.custom0,
+//             generator = (p: Parameters) => {
+//               val multiplierState = LazyModule(new multState.MultStateAccelerator()(p))
+//               multiplierState})
+//           ))
+//       }
+// })
 
 
 
@@ -144,16 +144,19 @@ class WithVecMulAddAccel extends Config((site, here, up) => {
 
 
 //crc
-class CrcAccelConfig extends Config(new WithCrcAccel ++ new DefaultConfig)
+// class CrcAccelConfig extends Config(new WithCrcAccel ++ new DefaultConfig)
 
-class WithCrcAccel extends Config((site, here, up) => {
-      case RocketTilesKey => up(RocketTilesKey, site).map { r =>
-        r.copy(rocc = Seq(
-          RoCCParams(
-            opcodes = OpcodeSet.custom0,
-            generator = (p: Parameters) => {
-              val crcd = LazyModule(new crc.CrcAccel()(p))
-              crcd})
-          ))
-      }
-})
+// class WithCrcAccel extends Config((site, here, up) => {
+//       case RocketTilesKey => up(RocketTilesKey, site).map { r =>
+//         r.copy(rocc = Seq(
+//           RoCCParams(
+//             opcodes = OpcodeSet.custom0,
+//             generator = (p: Parameters) => {
+//               val crcd = LazyModule(new crc.CrcAccel()(p))
+//               crcd})
+//           ))
+//       }
+// })
+
+
+

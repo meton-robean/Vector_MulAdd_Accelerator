@@ -24,7 +24,7 @@ class DpathModule(val w: Int, val n: Int) extends Module {
     val lat   = RegInit(0.U)  // latency counter
 
     //vector mult add unit
-    val VectorMulUnit = Module( new VectorMul(w, n) ).io
+    val VectorMulUnit = Module( new VectorMulAdd(w, n) ).io
 
     ///init
     for(i <- 0 until n){
