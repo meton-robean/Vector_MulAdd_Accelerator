@@ -1,10 +1,12 @@
 # Vector_MulAdd_Accelerator
-vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
+vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )  
+
+2019-08: add float point support  
 
 **rocc/accelerators/ : some accelerators using rocketchip RoCC.**  
 **kernel是向量乘加加速器实现，除此之外还有其他几个测试用的加速器例子供参考**  
-　#1 kernel/ : simple vector multiplication adder accelerator 
-　#2 crc/ : crc checking  
+　#1 kernel/ : simple vector multiplication adder accelerator   
+　#2 crc/ : crc checking   
 　#3 multState/ : simple scalar multiplication( e.g. a*b=c)  
 　#4 sha3/ : sha3 algs  
 　#5 spmv/ : sparse matrix multiplication  
