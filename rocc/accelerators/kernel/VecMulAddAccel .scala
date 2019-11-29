@@ -4,6 +4,9 @@ import Chisel._
 import freechips.rocketchip.tile._
 import freechips.rocketchip.config._
 
+
+//@cmt  VecMulAddAccel support float point calc
+
 class  VecMulAddAccel(implicit p: Parameters) extends LazyRoCC {
   override lazy val module = new VecMulAddAccelModule(this)
 }
