@@ -5,11 +5,11 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 
 **rocc/accelerators/ : some accelerators using rocketchip RoCC.**  
 **kernel是向量乘加加速器实现，除此之外还有其他几个测试用的加速器例子供参考**  
-　#1 kernel/ : simple vector multiplication adder accelerator   
-　#2 crc/ : crc checking   
-　#3 multState/ : simple scalar multiplication( e.g. a*b=c)  
-　#4 sha3/ : sha3 algs  
-　#5 spmv/ : sparse matrix multiplication  
+　- 1 kernel/ : simple vector multiplication adder accelerator   
+　- 2 crc/ : crc checking   
+　- 3 multState/ : simple scalar multiplication( e.g. a*b=c)  
+　- 4 sha3/ : sha3 algs  
+　- 5 spmv/ : sparse matrix multiplication  
  
 **rocc/sbt/ : sbt unit tests of accelerators 单元测试**   
 **rocc/zynq/ : zynq config file**   
@@ -17,13 +17,13 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 
 
 ### Usage:  
- #1 download rocketchip RoCC accelerator template:  
+ - 1 download rocketchip RoCC accelerator template:  
  ```
   git clone https://github.com/meton-robean/deca.git  
  ```
- #2 cd deca/    
- #3 replace rocc/ and verilator-tests/ in deca with rocc/ and verilator-tests in this repository  
- #4 **follow the README in deca to test the accelerators**   
+ - 2 cd deca/    
+ - 3 replace rocc/ and verilator-tests/ in deca with rocc/ and verilator-tests in this repository  
+ - 4 **follow the README in deca to test the accelerators**   
    
 ### Test:  
 e.g.if you test kernel accel(simple vector multiplication adder accelerator ):  
