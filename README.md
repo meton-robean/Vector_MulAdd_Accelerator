@@ -27,7 +27,7 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 e.g.if you test kernel accel(simple vector multiplication adder accelerator ):  
 
 #### C test case:
-'''
+```
 int main() {
     
     //test1
@@ -70,9 +70,9 @@ int main() {
     return 0;
 }
 
-'''
+```
 #### Result:  
-  '''
+```
   
 using random seed 1566300015  
 This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.  
@@ -139,8 +139,7 @@ tmp[2]:8
 [INFO] ***** result: 70 ****** success!  
 Completed after 3156322 cycles  
 }  
-
-  '''  
+```
   
  
 
