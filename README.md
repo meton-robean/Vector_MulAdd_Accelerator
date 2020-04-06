@@ -17,8 +17,10 @@ vector multiplication adder accelerator (using chisel3 and RocketChip RoCC )
 
 
 ### Usage:  
- #1 download rocketchip RoCC accelerator template:   
+ #1 download rocketchip RoCC accelerator template:  
+ ```
   git clone https://github.com/meton-robean/deca.git  
+ ```
  #2 cd deca/    
  #3 replace rocc/ and verilator-tests/ in deca with rocc/ and verilator-tests in this repository  
  #4 **follow the README in deca to test the accelerators**   
